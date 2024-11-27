@@ -5,6 +5,7 @@ import teachers from "../../data/teachers.json"
 
 import { FiArrowLeft, FiBarChart } from "react-icons/fi"
 import { FaBriefcase, FaGithub, FaLinkedin } from "react-icons/fa"
+import { TbClockHour2 } from "react-icons/tb"
 
 import { Header } from "../../components/Header"
 import { ButtonText } from "../../components/ButtonText"
@@ -88,6 +89,7 @@ export function DetailsCourse() {
               <div>
                 <Tag title={details.categorias.area} icon={FaBriefcase} />
                 <Tag title={details.categorias.nivel} icon={FiBarChart} />
+                <Tag title={`${details.duracaoHoras} horas`} icon={TbClockHour2} />
 
                 <span>|</span>
 
