@@ -21,4 +21,17 @@ export const Container = styled.button`
     color: ${({ theme }) => theme.COLORS.ACCENT_100};
     font-size: 0.875rem;
   }
+
+  &.back {
+    color: ${({ theme }) => theme.COLORS.PRIMARY_200};
+    font-size: 1rem;
+  }
+
+  &.linkedin {
+    color: ${({ theme }) => theme.COLORS.PRIMARY_100};
+  }
+
+  &.github {
+    color: ${({ theme }) => theme.COLORS.BLACK};
+  }
 `

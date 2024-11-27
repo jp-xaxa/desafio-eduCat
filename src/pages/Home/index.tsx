@@ -34,7 +34,7 @@ export function Home() {
   const navigate = useNavigate()
 
   function handleDetailsCourse(id: number) {
-    navigate(`/details/${id}`)
+    navigate(`/details-course/${id}`)
   }
 
   function handleFilter(filterName: string) {
