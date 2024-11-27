@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import data from "../../data/data.json"
 
 import { IoMdClose } from "react-icons/io"
@@ -30,6 +31,12 @@ export function Home() {
 
   const [filterSelected, setFilterSelected] = useState<string[]>([])
 
+  const navigate = useNavigate()
+
+  function handleDetailsCourse(id: number) {
+    navigate(`/details/${id}`)
+  }
+
   function handleFilter(filterName: string) {
     const alreadySelected = filterSelected.includes(filterName)
 
@@ -50,14 +57,13 @@ export function Home() {
   useEffect(() => {
     const filteredCourses = filterSelected.length
       ? data.filter((course) => {
-          // Filtrando os cursos com base no filtro selecionado
           const matchArea = filterSelected.includes(course.categorias.area)
           const matchLevel = filterSelected.includes(course.categorias.nivel)
           const matchTeacher = filterSelected.includes(course.professor)
 
           return matchArea || matchLevel || matchTeacher
         })
-      : data // Se não houver filtros selecionados, retorna todos os cursos
+      : data
 
     setCourses(filteredCourses)
 
@@ -144,6 +150,7 @@ export function Home() {
               title={course.titulo}
               description={course.descricao}
               instructorName={course.professor}
+              onClick={() => handleDetailsCourse(course.id)}
             />
           ))}
         </section>

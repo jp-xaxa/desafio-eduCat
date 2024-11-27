@@ -7,11 +7,17 @@ interface CardProps {
   title: string
   description: string
   instructorName: string
+  onClick: () => void
 }
 //
-export function Card({ title, description, instructorName }: CardProps) {
+export function Card({
+  title,
+  description,
+  instructorName,
+  onClick,
+}: CardProps) {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <img src={capa} alt="Imagem de capa do curso." />
 
       <div>
