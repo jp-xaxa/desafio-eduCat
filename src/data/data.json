@@ -1,0 +1,82 @@
+[
+  {
+    "id": 2,
+    "titulo": "Desenvolvimento Web com HTML e CSS",
+    "descricao": "Construa páginas web modernas utilizando HTML5 e CSS3.",
+    "categorias": { "area": "Front-end", "nivel": "Iniciante" },
+    "tags": ["HTML", "CSS", "Desenvolvimento Web"],
+    "professor": "Carlos Silva"
+  },
+  {
+    "id": 3,
+    "titulo": "JavaScript Avançado",
+    "descricao": "Domine os conceitos avançados de JavaScript para criar aplicações dinâmicas.",
+    "categorias": { "area": "Front-end", "nivel": "Avançado" },
+    "tags": ["JavaScript", "Avançado", "Web Development"],
+    "professor": "Ana Martins"
+  },
+  {
+    "id": 4,
+    "titulo": "React para Iniciantes",
+    "descricao": "Aprenda os fundamentos do React e crie componentes reutilizáveis.",
+    "categorias": { "area": "Front-end", "nivel": "Iniciante" },
+    "tags": ["React", "Frontend", "Iniciante"],
+    "professor": "Carlos Silva"
+  },
+  {
+    "id": 6,
+    "titulo": "Node.js e API REST",
+    "descricao": "Construa APIs robustas e escaláveis utilizando Node.js.",
+    "categorias": { "area": "Back-end", "nivel": "Avançado" },
+    "tags": ["Node.js", "Back-end", "APIs"],
+    "professor": "Ana Martins"
+  },
+  {
+    "id": 7,
+    "titulo": "Banco de Dados com SQL",
+    "descricao": "Domine o uso de SQL para manipulação de dados e criação de tabelas.",
+    "categorias": { "area": "Back-end", "nivel": "Intermediário" },
+    "tags": ["SQL", "Banco de Dados", "Backend"],
+    "professor": "Carlos Silva"
+  },
+  {
+    "id": 8,
+    "titulo": "Python para Data Science",
+    "descricao": "Explore o mundo da ciência de dados com Python e bibliotecas especializadas.",
+    "categorias": { "area": "IA", "nivel": "Intermediário" },
+    "tags": ["Python", "Data Science", "Análise de Dados"],
+    "professor": "Gabriel Lima"
+  },
+  {
+    "id": 10,
+    "titulo": "Machine Learning com Python",
+    "descricao": "Implemente modelos de aprendizado de máquina utilizando bibliotecas de Python.",
+    "categorias": { "area": "IA", "nivel": "Avançado" },
+    "tags": ["Machine Learning", "Python", "IA"],
+    "professor": "Gabriel Lima"
+  },
+  {
+    "id": 11,
+    "titulo": "Introdução ao Docker",
+    "descricao": "Aprenda a criar e gerenciar containers com Docker.",
+    "categorias": { "area": "DevOps", "nivel": "Iniciante" },
+    "tags": ["Docker", "DevOps", "Tecnologia"],
+    "professor": "Carlos Silva"
+  },
+  {
+    "id": 12,
+    "titulo": "Kotlin para Android",
+    "descricao": "Desenvolva aplicativos Android com a linguagem Kotlin.",
+    "categorias": { "area": "Mobile", "nivel": "Intermediário" },
+    "tags": ["Kotlin", "Android", "Mobile"],
+    "professor": "Larissa Almeida"
+  },
+  {
+    "id": 14,
+    "titulo": "React Native para Apps Mobile",
+    "descricao": "Crie aplicativos móveis multiplataforma com React Native.",
+    "categorias": { "area": "Mobile", "nivel": "Intermediário" },
+    "tags": ["React Native", "Mobile", "Frontend"],
+    "professor": "Carlos Silva"
+  }
+]
