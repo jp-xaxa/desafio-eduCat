@@ -19,6 +19,105 @@ export const Logo = styled.div`
   }
 `
 
+interface SearchStyles {
+  $active: boolean
+}
+
+export const Search = styled.div<SearchStyles>`
+  width: 50%;
+
+  position: relative;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+
+    padding: 0.75rem;
+
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_200};
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+
+    border-radius: 0.3125rem;
+
+    border-radius: ${({ $active }) =>
+      $active ? "0.3125rem 0.3125rem 0 0" : "0.3125rem"};
+
+    > svg {
+      font-size: 1.25rem;
+    }
+
+    > input {
+      width: 100%;
+      color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+      background: transparent;
+      border: none;
+
+      font-size: 1rem;
+
+      &::placeholder {
+        color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .options {
+    width: 100%;
+
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_200};
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+
+    position: absolute;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+    border-radius: 0 0 0.3125rem 0.3125rem;
+    border-top: ${({ theme, $active }) =>
+      $active ? `1px solid ${theme.COLORS.GRAY_200}` : "none"};
+  }
+`
+
+export const Option = styled.button`
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+  border: none;
+
+  > div {
+    display: flex;
+    gap: 0.3125rem;
+    align-items: end;
+    padding: 0.3125rem;
+
+    .title {
+      font-size: 1rem;
+      color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
+    }
+
+    > span {
+      font-size: 0.75rem;
+      color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
+      opacity: 0.8;
+    }
+  }
+
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+    border-radius: 0.3125rem;
+  }
+`
+
 export const Profile = styled.div`
   display: flex;
   align-items: center;
