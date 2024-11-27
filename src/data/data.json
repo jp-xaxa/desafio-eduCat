@@ -5,7 +5,11 @@
     "descricao": "Construa páginas web modernas utilizando HTML5 e CSS3.",
     "categorias": { "area": "Front-end", "nivel": "Iniciante" },
     "tags": ["HTML", "CSS", "Desenvolvimento Web"],
-    "professor": "Carlos Silva"
+    "professor": "Carlos Silva",
+    "professorId": 1,
+    "sobre": "Este curso oferece uma introdução abrangente ao desenvolvimento web utilizando HTML5 e CSS3. Aprenda como criar páginas web responsivas, aplicar estilos e formatações visuais, e compreender as melhores práticas de design. Ideal para quem está começando na área.",
+    "duracaoHoras": 20,
+    "avaliacao": 4.7
   },
   {
     "id": 3,
@@ -13,7 +17,11 @@
     "descricao": "Domine os conceitos avançados de JavaScript para criar aplicações dinâmicas.",
     "categorias": { "area": "Front-end", "nivel": "Avançado" },
     "tags": ["JavaScript", "Avançado", "Web Development"],
-    "professor": "Ana Martins"
+    "professor": "Ana Martins",
+    "professorId": 2,
+    "sobre": "Explore tópicos avançados de JavaScript, como manipulação de eventos, programação assíncrona, e design patterns. Este curso é ideal para desenvolvedores que já possuem conhecimento básico e desejam criar aplicações altamente performáticas.",
+    "duracaoHoras": 25,
+    "avaliacao": 4.8
   },
   {
     "id": 4,
@@ -21,7 +29,11 @@
     "descricao": "Aprenda os fundamentos do React e crie componentes reutilizáveis.",
     "categorias": { "area": "Front-end", "nivel": "Iniciante" },
     "tags": ["React", "Frontend", "Iniciante"],
-    "professor": "Carlos Silva"
+    "professor": "Carlos Silva",
+    "professorId": 1,
+    "sobre": "Este curso apresenta os conceitos fundamentais do React, incluindo JSX, estados, e propriedades. Descubra como criar componentes reutilizáveis e organizar projetos de forma eficiente.",
+    "duracaoHoras": 15,
+    "avaliacao": 4.6
   },
   {
     "id": 6,
@@ -29,7 +41,11 @@
     "descricao": "Construa APIs robustas e escaláveis utilizando Node.js.",
     "categorias": { "area": "Back-end", "nivel": "Avançado" },
     "tags": ["Node.js", "Back-end", "APIs"],
-    "professor": "Ana Martins"
+    "professor": "Ana Martins",
+    "professorId": 2,
+    "sobre": "Neste curso, você aprenderá como criar APIs RESTful utilizando Node.js e Express. Abordamos tópicos como autenticação, integração de banco de dados, e deploy em servidores.",
+    "duracaoHoras": 30,
+    "avaliacao": 4.9
   },
   {
     "id": 7,
@@ -37,7 +53,11 @@
     "descricao": "Domine o uso de SQL para manipulação de dados e criação de tabelas.",
     "categorias": { "area": "Back-end", "nivel": "Intermediário" },
     "tags": ["SQL", "Banco de Dados", "Backend"],
-    "professor": "Carlos Silva"
+    "professor": "Carlos Silva",
+    "professorId": 1,
+    "sobre": "Aprenda os fundamentos do SQL, incluindo criação de tabelas, inserção e consulta de dados. Este curso é ideal para quem deseja construir sistemas baseados em banco de dados.",
+    "duracaoHoras": 18,
+    "avaliacao": 4.5
   },
   {
     "id": 8,
@@ -45,7 +65,11 @@
     "descricao": "Explore o mundo da ciência de dados com Python e bibliotecas especializadas.",
     "categorias": { "area": "IA", "nivel": "Intermediário" },
     "tags": ["Python", "Data Science", "Análise de Dados"],
-    "professor": "Gabriel Lima"
+    "professor": "Gabriel Lima",
+    "professorId": 3,
+    "sobre": "Este curso explora ferramentas essenciais para análise de dados, como pandas, NumPy, e matplotlib. Descubra como processar, visualizar e interpretar grandes volumes de dados.",
+    "duracaoHoras": 35,
+    "avaliacao": 4.7
   },
   {
     "id": 10,
@@ -53,7 +77,11 @@
     "descricao": "Implemente modelos de aprendizado de máquina utilizando bibliotecas de Python.",
     "categorias": { "area": "IA", "nivel": "Avançado" },
     "tags": ["Machine Learning", "Python", "IA"],
-    "professor": "Gabriel Lima"
+    "professor": "Gabriel Lima",
+    "professorId": 3,
+    "sobre": "Aprenda os fundamentos do aprendizado de máquina, incluindo modelos supervisionados e não supervisionados. Utilizamos bibliotecas como scikit-learn e TensorFlow para criar soluções práticas.",
+    "duracaoHoras": 40,
+    "avaliacao": 4.9
   },
   {
     "id": 11,
@@ -61,7 +89,11 @@
     "descricao": "Aprenda a criar e gerenciar containers com Docker.",
     "categorias": { "area": "DevOps", "nivel": "Iniciante" },
     "tags": ["Docker", "DevOps", "Tecnologia"],
-    "professor": "Carlos Silva"
+    "professor": "Carlos Silva",
+    "professorId": 1,
+    "sobre": "Entenda os conceitos de virtualização e como utilizar containers Docker para criar ambientes isolados. Ideal para desenvolvedores e engenheiros de software iniciando em DevOps.",
+    "duracaoHoras": 12,
+    "avaliacao": 4.3
   },
   {
     "id": 12,
@@ -69,7 +101,11 @@
     "descricao": "Desenvolva aplicativos Android com a linguagem Kotlin.",
     "categorias": { "area": "Mobile", "nivel": "Intermediário" },
     "tags": ["Kotlin", "Android", "Mobile"],
-    "professor": "Larissa Almeida"
+    "professor": "Larissa Almeida",
+    "professorId": 4,
+    "sobre": "Este curso ensina a criar aplicativos Android do zero utilizando Kotlin. Inclui conceitos como atividades, layouts, e integração de APIs externas.",
+    "duracaoHoras": 28,
+    "avaliacao": 4.6
   },
   {
     "id": 14,
@@ -77,6 +113,10 @@
     "descricao": "Crie aplicativos móveis multiplataforma com React Native.",
     "categorias": { "area": "Mobile", "nivel": "Intermediário" },
     "tags": ["React Native", "Mobile", "Frontend"],
-    "professor": "Carlos Silva"
+    "professor": "Carlos Silva",
+    "professorId": 1,
+    "sobre": "Descubra como criar aplicativos móveis para Android e iOS utilizando React Native. Aprenda sobre navegação, gerenciamento de estados, e deploy de aplicativos.",
+    "duracaoHoras": 25,
+    "avaliacao": 4.7
   }
 ]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "nome": "Carlos Silva",
+    "biografia": "Carlos Silva é um desenvolvedor full-stack com mais de 10 anos de experiência na criação de soluções web e móveis. Ele é apaixonado por ensinar e ajudar novos desenvolvedores a alcançarem seus objetivos na área de tecnologia.",
+    "especializacoes": ["Front-end", "Back-end", "DevOps"],
+    "formacao": "Bacharel em Ciência da Computação pela Universidade Federal de São Paulo (2012)",
+    "redesSociais": {
+      "linkedin": "https://www.linkedin.com/in/carlossilva",
+      "github": "https://github.com/carlossilva"
+    }
+  },
+  {
+    "id": 2,
+    "nome": "Ana Martins",
+    "biografia": "Ana Martins é especialista em JavaScript e frameworks modernos. Ela tem ampla experiência na criação de aplicativos escaláveis e de alta performance e é uma defensora de boas práticas de desenvolvimento.",
+    "especializacoes": ["JavaScript", "React", "Node.js"],
+    "formacao": "Mestre em Engenharia de Software pela Universidade de São Paulo (2015)",
+    "redesSociais": {
+      "linkedin": "https://www.linkedin.com/in/anamartins",
+      "github": "https://github.com/anamartins"
+    }
+  },
+  {
+    "id": 3,
+    "nome": "Gabriel Lima",
+    "biografia": "Gabriel Lima é cientista de dados com especialização em aprendizado de máquina e análise de grandes volumes de dados. Ele já trabalhou em projetos para empresas globais e compartilha seu conhecimento por meio de aulas e workshops.",
+    "especializacoes": ["Ciência de Dados", "Machine Learning", "Python"],
+    "formacao": "Doutor em Inteligência Artificial pela Universidade Federal de Minas Gerais (2018)",
+    "redesSociais": {
+      "linkedin": "https://www.linkedin.com/in/gabriellima",
+      "github": "https://github.com/gabriellima"
+    }
+  },
+  {
+    "id": 4,
+    "nome": "Larissa Almeida",
+    "biografia": "Larissa Almeida é desenvolvedora mobile especializada em Kotlin e desenvolvimento nativo para Android. Ela já liderou equipes em projetos de aplicativos premiados e tem grande interesse em criar experiências de usuário inovadoras.",
+    "especializacoes": ["Mobile Development", "Kotlin", "Android"],
+    "formacao": "Bacharel em Engenharia de Software pela Universidade Estadual do Rio de Janeiro (2014)",
+    "redesSociais": {
+      "linkedin": "https://www.linkedin.com/in/larissaalmeida",
+      "github": "https://github.com/larissaalmeida"
+    }
+  }
+]
