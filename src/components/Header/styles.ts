@@ -5,7 +5,7 @@ export const Container = styled.header`
 
   width: 100%;
   background-color: ${({ theme }) => theme.COLORS.PRIMARY_200};
-  padding: 0.3125rem 2rem;
+  padding: 0.625rem 2rem;
 
   display: flex;
   gap: 1.5rem;

@@ -16,4 +16,9 @@ export const Container = styled.button`
   > svg {
     margin-right: 0.5rem;
   }
+
+  &.clear {
+    color: ${({ theme }) => theme.COLORS.ACCENT_100};
+    font-size: 0.875rem;
+  }
 `
