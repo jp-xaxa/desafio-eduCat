@@ -1,50 +1,77 @@
-# React + TypeScript + Vite
+<h1 align="center">📚 Desafio EduCAT - Front-end 📚</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+Criação do front-end de um plataforma de cursos on-lines. Esse projeto foi desenvolvido para a realização do desafio tecnico da vaga Desenvolvedor fron-end Júnior.
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="#🚀-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#💻-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#⚙️-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#🗂️-Clonar">Clonar</a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias
 
-## Expanding the ESLint configuration
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- ReactJS
+- Styled-component
+- react-router-dom
+- react-icons
+- Criação de components
+- useStates, useEffect e useContext
+- Responsividade
 
-- Configure the top-level `parserOptions` property like this:
+## 💻 Projeto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+O projeto consiste na criação do front-end de uma plataforma de cursos online, desenvolvida como parte de um desafio técnico para a posição de Desenvolvedor Front-end Júnior. A aplicação é uma SPA (Single Page Application) desenvolvida com ReactJS e TypeScript, seguindo os seguintes objetivos principais:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Listagem de Cursos: Apresentar uma lista de cursos com título, descrição curta e nome do instrutor, com opções de filtragem por categoria e instrutor.
+- Detalhes do Curso: Disponibilizar uma página detalhada com informações completas sobre o curso, incluindo currículo, descrição, duração e avaliação.
+- Cadastro em Cursos: Permitir que os usuários se registrem em um curso diretamente pela página de detalhes.
+- Pesquisa: Implementar uma barra de pesquisa para buscar cursos por palavras-chave, incluindo título, descrição e tags.
+- Responsividade: Garantir que a aplicação seja visualmente adequada em dispositivos móveis, tablets e desktops.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## ⚙️ Funcionalidades
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Exploração de Cursos: Os usuários podem visualizar a lista de cursos disponíveis com informações relevantes.
+- Filtragem:
+  - Filtrar cursos por categorias, nível e instrutor.
+  - Sistema de filtragem dinâmico utilizando Context API para gerenciamento de estado.
+- Detalhes do Curso:
+  -Página de detalhes com título, descrição, duração, nível, área e avaliação do curso.
+  - Exibição do perfil do professor com suas especializações e links para redes sociais.
+- Cadastro de Cursos:
+  - Registro e cancelamento de inscrição em cursos.
+  - Persistência de dados utilizando localStorage.
+- Pesquisa Avançada:
+  - Busca por palavras-chave nos títulos, descrições e tags dos cursos.
+  - Resultados exibidos dinamicamente enquanto o usuário digita.
+- Design Responsivo: Aplicação totalmente responsiva, adaptando-se a diferentes tamanhos de tela.
+- Persistência: Informações de cursos registrados permanecem salvas mesmo após recarregar a página.
+
+## 🗂️ Clonar
+
+Para clonar e executar o projeto localmente, siga os passos abaixo:
+
+1. Clone o repositório:
+
+- git clone https://github.com/seu-usuario/nome-do-repositorio.git
+  cd nome-do-repositorio
+
+2. Instale as dependências: Certifique-se de que você tem o Node.js e o npm ou Yarn instalados.
+
+- npm install, ou
+- yarn
+
+3. Inicie o projeto:
+
+- npm start
+- npm run dev
+
+4. Acesse a aplicação: Abra o navegador e acesse:
+
+- http://localhost:5173
+
+Obs: Caso tiver usado o npm run dev, irá gerar o link no terminal e só é preciso clicar nele.
