@@ -1,21 +1,33 @@
 import styled from "styled-components"
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints"
 
 export const Container = styled.header`
   grid-area: header;
-
   width: 100%;
   background-color: ${({ theme }) => theme.COLORS.PRIMARY_200};
-  padding: 0.625rem 2rem;
+`
 
+export const Content = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
-  gap: 1.5rem;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    padding: 0.625rem;
+    gap: 0.625rem;
+  }
 `
 
 export const Logo = styled.div`
   > img {
     height: 3.125rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    display: none;
   }
 `
 
@@ -80,6 +92,26 @@ export const Search = styled.div<SearchStyles>`
     border-top: ${({ theme, $active }) =>
       $active ? `1px solid ${theme.COLORS.GRAY_200}` : "none"};
   }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    width: 100%;
+
+    > div {
+      padding: 0.5rem;
+
+      > svg {
+        font-size: 1rem;
+      }
+
+      > input {
+        font-size: 0.875rem;
+
+        &::placeholder {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
 `
 
 export const Option = styled.button`
@@ -95,7 +127,7 @@ export const Option = styled.button`
   > div {
     display: flex;
     gap: 0.3125rem;
-    align-items: end;
+    align-items: start;
     padding: 0.3125rem;
 
     .title {
@@ -103,10 +135,12 @@ export const Option = styled.button`
       color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
     }
 
-    > span {
-      font-size: 0.75rem;
-      color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
-      opacity: 0.8;
+    > div {
+      > span {
+        font-size: 0.75rem;
+        color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
+        opacity: 0.8;
+      }
     }
   }
 
@@ -115,6 +149,21 @@ export const Option = styled.button`
   &:hover {
     color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     border-radius: 0.3125rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    > div {
+      flex-direction: column;
+      .title {
+        font-size: 0.75rem;
+      }
+
+      > div {
+        > span {
+          font-size: 0.625rem;
+        }
+      }
+    }
   }
 `
 
@@ -158,5 +207,28 @@ export const Profile = styled.div`
     height: 2.5rem;
     border-radius: 50%;
     cursor: pointer;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    display: none;
+  }
+`
+
+export const ButtonIcon = styled.button`
+  display: none;
+
+  border: none;
+  background-color: transparent;
+
+  color: ${({ theme }) => theme.COLORS.WHITE};
+
+  cursor: pointer;
+
+  > svg {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    display: block;
   }
 `
