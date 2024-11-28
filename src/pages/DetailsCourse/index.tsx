@@ -13,6 +13,7 @@ import { Header } from "../../components/Header"
 import { ButtonText } from "../../components/ButtonText"
 import { Tag } from "../../components/Tag"
 import { Button } from "../../components/Button"
+import { Menu } from "../../components/Menu"
 
 import { Container, Content, Cover, About, Teacher } from "./styles"
 
@@ -50,6 +51,8 @@ export function DetailsCourse() {
 
   const params = useParams()
   const navigate = useNavigate()
+
+  const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
 
   const { registeredCourses, registerCourse, unregisterCourse } =
     useCoursesRegister()
@@ -90,92 +93,98 @@ export function DetailsCourse() {
 
   return (
     <Container>
-      <Header />
+      <Menu menuIsOpen={menuIsOpen} onCloseMenu={() => setMenuIsOpen(false)} />
+
+      <Header onOpenMenu={() => setMenuIsOpen(true)} />
 
       <Content>
-        <ButtonText
-          title="Voltar"
-          icon={FiArrowLeft}
-          onClick={handleBack}
-          className="back"
-        />
+        <section>
+          <ButtonText
+            title="Voltar"
+            icon={FiArrowLeft}
+            onClick={handleBack}
+            className="back"
+          />
 
-        {details && (
-          <>
-            <Cover>
-              <h1>{details.titulo}</h1>
+          {details && (
+            <>
+              <Cover>
+                <h1>{details.titulo}</h1>
 
-              <p>{details.descricao}</p>
+                <p>{details.descricao}</p>
 
-              <div>
-                <Tag title={details.categorias.area} icon={FaBriefcase} />
-                <Tag title={details.categorias.nivel} icon={FiBarChart} />
-                <Tag
-                  title={`${details.duracaoHoras} horas`}
-                  icon={TbClockHour2}
-                />
+                <div>
+                  <Tag title={details.categorias.area} icon={FaBriefcase} />
+                  <Tag title={details.categorias.nivel} icon={FiBarChart} />
+                  <Tag
+                    title={`${details.duracaoHoras} horas`}
+                    icon={TbClockHour2}
+                  />
 
-                <span>|</span>
+                  <span>|</span>
 
-                {details.tags.map((tag, index) => (
-                  <Tag key={String(index)} title={tag} />
-                ))}
-              </div>
-            </Cover>
+                  {details.tags.map((tag, index) => (
+                    <Tag key={String(index)} title={tag} />
+                  ))}
+                </div>
+              </Cover>
 
-            <About>
+              <About>
+                <div>
+                  <h1 className="title">
+                    Sobre o curso <span> (Avaliação: {details.avaliacao})</span>
+                  </h1>
+                </div>
+
+                <p>{details.sobre}</p>
+              </About>
+            </>
+          )}
+
+          {teacher && (
+            <Teacher>
               <div>
                 <h1 className="title">
-                  Sobre o curso <span> (Avaliação: {details.avaliacao})</span>
+                  Professor: {teacher.nome} <span> ({teacher.formacao})</span>
                 </h1>
+
+                <div>
+                  <ButtonText
+                    title="LinkedIn"
+                    icon={FaLinkedin}
+                    className="linkedin"
+                    onClick={() =>
+                      window.open("https://www.linkedin.com/", "_blank")
+                    }
+                  />
+                  <ButtonText
+                    title="GitHub"
+                    icon={FaGithub}
+                    className="github"
+                    onClick={() => window.open("https://github.com/", "_blank")}
+                  />
+                </div>
               </div>
 
-              <p>{details.sobre}</p>
-            </About>
-          </>
-        )}
+              <p>{teacher.biografia}</p>
 
-        {teacher && (
-          <Teacher>
-            <div>
-              <h1 className="title">
-                Professor: {teacher.nome} <span> ({teacher.formacao})</span>
-              </h1>
+              <footer>
+                {teacher.especializacoes.map((spec, index) => (
+                  <Tag key={String(index)} title={spec} />
+                ))}
+              </footer>
+            </Teacher>
+          )}
 
-              <div>
-                <ButtonText
-                  title="LinkedIn"
-                  icon={FaLinkedin}
-                  className="linkedin"
-                  onClick={() =>
-                    window.open("https://www.linkedin.com/", "_blank")
-                  }
-                />
-                <ButtonText
-                  title="GitHub"
-                  icon={FaGithub}
-                  className="github"
-                  onClick={() => window.open("https://github.com/", "_blank")}
-                />
-              </div>
-            </div>
-
-            <p>{teacher.biografia}</p>
-
-            <div className="specialization">
-              {teacher.especializacoes.map((spec, index) => (
-                <Tag key={String(index)} title={spec} />
-              ))}
-            </div>
-          </Teacher>
-        )}
-
-        <Button
-          title={
-            isCourseRegistered ? "Cancelar inscrição" : "Registrar no curso"
-          }
-          onClick={handleCourseRegistration}
-        />
+          <div style={{ margin: "0 auto" }}>
+            <Button
+              title={
+                isCourseRegistered ? "Cancelar inscrição" : "Registrar no curso"
+              }
+              onClick={handleCourseRegistration}
+            />
+          </div>
+        </section>
       </Content>
     </Container>
   )

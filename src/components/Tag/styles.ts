@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints"
 
 export const Container = styled.div`
   width: auto;
@@ -13,9 +14,13 @@ export const Container = styled.div`
   border-radius: 999px;
 
   font-size: 0.75rem;
+  white-space: nowrap;
   color: ${({ theme }) => theme.COLORS.TEXT_SECONDARY};
 
   > svg {
     color: ${({ theme }) => theme.COLORS.SECONDARY_100};
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
   }
 `

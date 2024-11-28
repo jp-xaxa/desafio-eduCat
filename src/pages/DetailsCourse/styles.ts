@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints"
 
 export const Container = styled.div`
   width: 100%;
@@ -15,13 +16,21 @@ export const Content = styled.main`
   grid-area: content;
   height: 100%;
 
-  padding: 1rem 3.125rem;
+  > section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem 3.125rem;
 
-  overflow-y: auto;
+    overflow-y: auto;
 
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    padding: 1rem;
+  }
 `
 
 export const Cover = styled.div`
@@ -48,6 +57,24 @@ export const Cover = styled.div`
     > span {
       font-size: 2rem;
       opacity: 0.2;
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    > h1 {
+      font-size: 1.5rem;
+    }
+
+    > p {
+      font-size: 0.875rem;
+    }
+
+    > div {
+      flex-wrap: wrap;
+
+      > span {
+        display: none;
+      }
     }
   }
 `
@@ -85,6 +112,22 @@ export const About = styled.div`
     font-size: 1rem;
     color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     padding: 0.625rem 0.75rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    > div {
+      .title {
+        font-size: 1.25rem;
+
+        > span {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    > p {
+      font-size: 0.875rem;
+    }
   }
 `
 
@@ -124,14 +167,6 @@ export const Teacher = styled.div`
       }
     }
 
-    &.specialization {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      gap: 1rem;
-      border: none;
-    }
-
     > div {
       display: flex;
       align-items: center;
@@ -143,5 +178,41 @@ export const Teacher = styled.div`
     font-size: 1rem;
     color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
     padding: 0.625rem 0.75rem;
+  }
+
+  > footer {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    border: none;
+    padding: 0.625rem 0.75rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    > div {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.625rem;
+
+      .title {
+        font-size: 1.25rem;
+
+        > span {
+          font-size: 0.75rem;
+        }
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    > p {
+      font-size: 0.875rem;
+    }
   }
 `

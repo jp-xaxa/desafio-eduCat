@@ -49,30 +49,30 @@ export const Content = styled.main`
       justify-items: center;
       gap: 1.25rem;
     }
+  }
 
-    @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
-      padding: 0.5rem 0.625rem;
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    padding: 0.5rem 0.625rem;
 
-      > section {
-        grid-template-columns: 1fr;
-      }
-
-      > div {
-        justify-content: space-between;
-        > h1 {
-          font-size: 1.5rem;
-        }
-      }
+    > section {
+      grid-template-columns: 1fr;
     }
 
-    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-      position: relative;
-
-      padding: 0.5rem 0.625rem;
-
-      > div {
-        justify-content: space-between;
+    > div {
+      justify-content: space-between;
+      > h1 {
+        font-size: 1.5rem;
       }
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    position: relative;
+
+    padding: 0.5rem 0.625rem;
+
+    > div {
+      justify-content: space-between;
     }
   }
 `
