@@ -3,6 +3,8 @@ import { useNavigate, useParams } from "react-router-dom"
 import data from "../../data/data.json"
 import teachers from "../../data/teachers.json"
 
+import { useCoursesRegister } from "../../hook/coursesRegister"
+
 import { FiArrowLeft, FiBarChart } from "react-icons/fi"
 import { FaBriefcase, FaGithub, FaLinkedin } from "react-icons/fa"
 import { TbClockHour2 } from "react-icons/tb"
@@ -10,10 +12,12 @@ import { TbClockHour2 } from "react-icons/tb"
 import { Header } from "../../components/Header"
 import { ButtonText } from "../../components/ButtonText"
 import { Tag } from "../../components/Tag"
+import { Button } from "../../components/Button"
 
 import { Container, Content, Cover, About, Teacher } from "./styles"
 
 interface Details {
+  id: number
   titulo: string
   descricao: string
   categorias: {
@@ -42,12 +46,24 @@ interface Teacher {
 export function DetailsCourse() {
   const [details, setDetails] = useState<Details | null>(null)
   const [teacher, setTeacher] = useState<Teacher | null>(null)
+  const [isCourseRegistered, setIsCourseRegistered] = useState(false)
 
   const params = useParams()
   const navigate = useNavigate()
 
+  const { registeredCourses, registerCourse, unregisterCourse } =
+    useCoursesRegister()
+
   function handleBack() {
     navigate(-1)
+  }
+
+  function handleCourseRegistration() {
+    if (isCourseRegistered) {
+      unregisterCourse(details!.id)
+    } else {
+      registerCourse(details!)
+    }
   }
 
   useEffect(() => {
@@ -64,8 +80,13 @@ export function DetailsCourse() {
       if (courseTeacher) {
         setTeacher(courseTeacher)
       }
+
+      const isRegistered = registeredCourses.some(
+        (course) => course.id === courseDetails.id
+      )
+      setIsCourseRegistered(isRegistered)
     }
-  }, [params.id])
+  }, [params.id, registeredCourses])
 
   return (
     <Container>
@@ -89,7 +110,10 @@ export function DetailsCourse() {
               <div>
                 <Tag title={details.categorias.area} icon={FaBriefcase} />
                 <Tag title={details.categorias.nivel} icon={FiBarChart} />
-                <Tag title={`${details.duracaoHoras} horas`} icon={TbClockHour2} />
+                <Tag
+                  title={`${details.duracaoHoras} horas`}
+                  icon={TbClockHour2}
+                />
 
                 <span>|</span>
 
@@ -145,6 +169,13 @@ export function DetailsCourse() {
             </div>
           </Teacher>
         )}
+
+        <Button
+          title={
+            isCourseRegistered ? "Cancelar inscrição" : "Registrar no curso"
+          }
+          onClick={handleCourseRegistration}
+        />
       </Content>
     </Container>
   )
