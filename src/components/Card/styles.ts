@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints"
 
 export const Container = styled.div`
   display: flex;
@@ -49,6 +50,23 @@ export const Container = styled.div`
       transition: color 0.3s ease;
     }
   }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    max-width: 275px;
+
+    > div {
+      padding: 0.625rem;
+      gap: 0.3125rem;
+
+      > h1 {
+        font-size: 1rem;
+      }
+
+      > p {
+        font-size: 0.875rem;
+      }
+    }
+  }
 `
 
 export const Teacher = styled.div`
@@ -62,5 +80,13 @@ export const Teacher = styled.div`
 
   > svg {
     font-size: 1.25rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    font-size: 0.875rem;
+
+    > svg {
+      font-size: 1rem;
+    }
   }
 `
